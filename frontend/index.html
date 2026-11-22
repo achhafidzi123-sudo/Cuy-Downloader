@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="mad">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CUY DOWNLOADER</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="scene">
+  <div class="glow"></div>
+
+  <div class="wrap">
+    <p class="credit">Èghabay bân <b>Afi Hafidzi</b></p>
+    <p class="wordmark">CUY <b>DOWNLOADER</b></p>
+    <h1 class="hero">Sabe' link, pele résolusi, mare.</h1>
+    <p class="sub">Ngala' video dari YouTube, TikTok, Instagram, ban atos-atosan situs laenna, langsung dari browser.</p>
+
+    <div class="console">
+      <div class="pills" id="tabs">
+        <button class="pill active" data-tab="youtube">YouTube</button>
+        <button class="pill" data-tab="tiktok">TikTok</button>
+        <button class="pill" data-tab="instagram">Instagram</button>
+        <button class="pill" data-tab="lainnya">Laenna</button>
+      </div>
+
+      <div class="console-body" id="panel-youtube">
+        <div class="input-row">
+          <input type="text" class="url-input" placeholder="Sabe' link YouTube..." data-platform="youtube">
+          <button class="check-btn" data-platform="youtube">Pareksa video</button>
+        </div>
+      </div>
+
+      <div class="console-body hidden" id="panel-tiktok">
+        <div class="input-row">
+          <input type="text" class="url-input" placeholder="Sabe' link TikTok..." data-platform="tiktok">
+          <button class="check-btn" data-platform="tiktok">Pareksa video</button>
+        </div>
+      </div>
+
+      <div class="console-body hidden" id="panel-instagram">
+        <div class="input-row">
+          <input type="text" class="url-input" placeholder="Sabe' link Instagram (Reels/Post)..." data-platform="instagram">
+          <button class="check-btn" data-platform="instagram">Pareksa video</button>
+        </div>
+      </div>
+
+      <div class="console-body hidden" id="panel-lainnya">
+        <div class="input-row">
+          <input type="text" class="url-input" placeholder="Sabe' link video..." data-platform="lainnya">
+          <button class="check-btn" data-platform="lainnya">Pareksa video</button>
+        </div>
+        <p class="hint">Bisa kaangguy Facebook, Twitter/X, Twitch, Vimeo, ban atos-atosan situs laenna.</p>
+      </div>
+    </div>
+
+    <div class="status hidden" id="status"></div>
+
+    <div class="result hidden" id="result">
+      <div class="result-card">
+        <img class="thumb-img hidden" id="result-thumb-img" src="" alt="thumbnail" />
+        <div class="thumb" id="result-thumb-placeholder">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <path d="M10 8.5L16 12L10 15.5V8.5Z" fill="#F3F1E6"/>
+          </svg>
+        </div>
+        <div class="result-main">
+          <div class="result-top">
+            <h3 class="result-title" id="result-title">-</h3>
+            <span class="duration" id="result-duration">0:00</span>
+          </div>
+          <p class="uploader" id="result-uploader">-</p>
+          <div class="resolutions" id="resolutions"></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer">Angguy pera' kaangguy konten andhika dhibi' otaba se pajhât olle èngala' menorot izin se andhi'. Hormat hak cipta ban atoran layanan kabbhi platform.</p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
